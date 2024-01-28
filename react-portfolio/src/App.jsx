@@ -4,7 +4,7 @@ import style from './App.module.css'
 function App() {
 
   return (
-    <div>
+    <div className={style.App}>
          hello word!
 
     </div>
