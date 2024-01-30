@@ -4,7 +4,7 @@ import { getImageUrl } from '../../utils';
 
 function About() {
   return (
-    <section className={style.container}>
+    <section className={style.container} id="about">
 
         <h2 className={style.title}>About</h2>
 
