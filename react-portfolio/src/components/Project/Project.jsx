@@ -1,26 +1,16 @@
 import React from 'react'
+import style from "./Project.module.css";
 import Projects from "../../data/Project.json";
-import { getImageUrl } from '../../utils';
+import { ProjectCard } from './ProjectCard';
 
 function Project() {
   return (
-    <section>
-        <h2>Projects</h2>
-        <div>
+    <section className={style.container}>
+        <h2 className={style.title}>Projects</h2>
+        <div className={style.project}>
             {Projects.map((Project,id)=>{
                 return(
-                    <div key={id}>
-                        <img src={getImageUrl(Project.imageSrc)} alt={`Image of ${Project.tttle}`} />
-                        <h3>{Project.tttle}</h3>
-                        <p>{Project.description}</p>
-                        <ul>
-                            {Project.skills.map((skill,id)=>{
-                                <li key={id}>{skill}</li>;
-                            })}
-                        </ul>
-                        <a href={Project.demo}>Demo</a>
-                        <a href={Project.source}>Source</a>
-                    </div>
+                    <ProjectCard key={id} Project={Project}/>
                 )
             })}
         </div>
