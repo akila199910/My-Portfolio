@@ -5,7 +5,7 @@ import { ProjectCard } from './ProjectCard';
 
 function Project() {
   return (
-    <section className={style.container}>
+    <section className={style.container} id='projects'>
         <h2 className={style.title}>Projects</h2>
         <div className={style.project}>
             {Projects.map((Project,id)=>{
